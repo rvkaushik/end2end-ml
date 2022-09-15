@@ -21,7 +21,9 @@ def get_model(input_shape, num_classes=10, optimizer="adam", loss="sparse_catego
     """
     """
     model = keras.models.Sequential([
-        keras.layers.Conv2D(32, (3,3), activation="relu", input_shape=input_shape),
+        keras.layers.Conv2D(32, (3,3), activation="relu", padding="same", input_shape=input_shape),
+        keras.layers.MaxPooling2D((2,2)),
+        keras.layers.Conv2D(16, (3,3), padding="same", activation="relu"),
         keras.layers.MaxPooling2D((2,2)),
         keras.layers.Flatten(),
         keras.layers.Dense(num_classes, activation="softmax")

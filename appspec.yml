@@ -87,16 +87,16 @@ hooks:
       runas: 
 # During the BeforeInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-  BeforeInstall:
-    - location: source ~/e2e/bain/activate
-      timeout: 60
-      runas: root
+  # BeforeInstall:
+  #   - location: source ~/e2e/bain/activate
+  #     timeout: 60
+  #     runas: root
 # During the AfterInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-  AfterInstall:
-    - location: pip3 install -r requirement.txt    
-      timeout: 300
-      runas: root
+  # AfterInstall:
+  #   - location: pip3 install -r requirement.txt    
+  #     timeout: 300
+  #     runas: root
   #   - location: 
   #     timeout:
   #     runas:

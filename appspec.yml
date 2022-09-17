@@ -103,6 +103,9 @@ hooks:
 # During the ApplicationStart deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   ApplicationStart:
+    - location: cd /home/ubuntu/projects
+      timeout: 10
+      runas: root
     - location: python3 infer.py 
       timeout: 60
       runas: root

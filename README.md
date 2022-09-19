@@ -1,6 +1,6 @@
 # end2end-ml
 
-"code deploy check -- pipline   "
+"code deploy check -- pipline   ---- codepipeline"
 
 ## Getting started
 

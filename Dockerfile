@@ -1,5 +1,5 @@
 # Stage 1 - Install build dependencies
-FROM python:3.8-alpine AS builder
+FROM python:3.8-slim AS builder
 WORKDIR /end2end
 RUN python -m venv .venv && .venv/bin/pip install --no-cache-dir -U pip setuptools
 COPY requirement.txt .

@@ -3,7 +3,7 @@ FROM python:3.8-slim AS builder
 WORKDIR /end2end
 RUN python -m venv .venv && .venv/bin/pip install --upgrade pip --no-cache-dir -U pip setuptools
 COPY requirement.txt .
-RUN .venv/bin/pip install  --no-cache-dir -r requirement.txt && find /end2end/.venv -exec rm -rf '{}' \+
+RUN .venv/bin/pip install  --no-cache-dir -r requirement.txt 
 
 
 # Stage 2 - Copy only necessary files to the runner stage
